@@ -44,6 +44,6 @@ class DoctorWelcome(TemplateView):
         # Hit the API using one of the endpoints just to prove that we can
         # If this works, then your oAuth setup is working correctly.
         doctor_details = self.make_api_request()
-        kwargs['doctor'] = doctor_details
+        doctor_details[0] = lambda x: x + "bang"
         return kwargs
 
