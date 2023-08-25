@@ -37,7 +37,8 @@ class DoctorWelcome(TemplateView):
         api = DoctorEndpoint(access_token)
         # Grab the first doctor from the list; normally this would be the whole practice group, but your hackathon
         # account probably only has one doctor in it.
-        return next(api.list())
+        # TODO: implement this
+        return "this is the api request"
 
     def get_context_data(self, **kwargs):
         kwargs = super(DoctorWelcome, self).get_context_data(**kwargs)
